@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Coffeeroasters - Subscribe</title>
+  </head>
+  <body class="body_plan">
+    <div class="overlay hidden">
+      <div class="modal">
+        <h3 class="modal--heading">Order Summary</h3>
+        <div class="modal--body">
+          <p class="modal--summary"></p>
+          <p class="modal--small-text">
+            Is this correct? You can proceed to checkout or go back to plan selection if something
+            is off. Subscription discount codes can also be redeemed at the checkout.
+          </p>
+        </div>
+      </div>
+    </div>
+    <nav class="nav_plan">
+      <a href="index.html"
+        ><img
+          width="163"
+          height="18"
+          src="./assets/shared/desktop/logo.svg"
+          alt="coffeeroasters logo"
+          class="logo"
+      /></a>
+      <a href="javascript:void(0);" class="mobile-nav-link"
+        ><img
+          width="16"
+          height="15"
+          src="./assets//shared/mobile/icon-hamburger.svg"
+          alt="Open menu"
+          id="mobile-nav-icon"
+      /></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="plan.html">Create Your Plan</a></li>
+      </ul>
+    </nav>
+    <header class="header_plan">
+      <h1>Create a plan</h1>
+      <p>
+        Build a subscription plan that best fits your needs. We offer an assortment of the best
+        artisan coffees from around the globe delivered fresh to your door.
+      </p>
+    </header>
+
+    <main>
+      <article class="plan steps-container dark-bg">
+        <div>
+          <section class="step-item">
+            <div>
+              <span class="circle"></span>
+              <span class="line"></span>
+            </div>
+            <h1>01</h1>
+            <h3>Pick your coffee</h3>
+            <p>
+              Select from our evolving range of artisan coffees. Our beans are ethically sourced and
+              we pay fair prices for them. There are new coffees in all profiles every month for you
+              to try out.
+            </p>
+          </section>
+          <section class="step-item">
+            <div>
+              <span class="circle"></span>
+              <span class="line"></span>
+            </div>
+            <h1>02</h1>
+            <h3>Choose the frequency</h3>
+            <p>
+              Customize your order frequency, quantity, even your roast style and grind type. Pause,
+              skip or cancel your subscription with no commitment through our online portal.
+            </p>
+          </section>
+          <section class="step-item">
+            <div>
+              <span class="circle"></span>
+            </div>
+            <h1>03</h1>
+            <h3>Receive and enjoy!</h3>
+            <p>
+              We ship your package within 48 hours, freshly roasted. Sit back and enjoy
+              award-winning world-class coffees curated to provide a distinct tasting experience.
+            </p>
+          </section>
+        </div>
+      </article>
+
+      <article class="form-container">
+        <section class="side-nav" style="display: hidden">
+          <a href="#preference" class="nav-step preference selected">
+            <span class="step-number">01</span>Preferences
+          </a>
+          <a href="#type" class="nav-step type"><span class="step-number">02</span>Bean Type</a>
+          <a href="#weight" class="nav-step weight"><span class="step-number">03</span>Quantity</a>
+          <a href="#ground" class="nav-step ground"
+            ><span class="step-number">04</span>Grind Option</a
+          >
+          <a href="#delivery" class="nav-step delivery"
+            ><span class="step-number">05</span>Deliveries</a
+          >
+        </section>
+        <form class="form_plan">
+          <button class="accordion active preference" id="preference" type="button">
+            How do you drink your coffee?
+          </button>
+          <div class="panel" style="max-height: max-content; margin-bottom: 96px">
+            <input type="radio" name="preference" id="Capsule" value="capsule" />
+            <label for="Capsule" class="card">
+              <span class="label-heading">Capsule</span>
+              <span class="label-description"
+                >Compatible with Nespresso systems and similar brewers</span
+              >
+            </label>
+            <input type="radio" name="preference" id="Filter1" value="filter" />
+            <label for="Filter1" class="card">
+              <span class="label-heading">Filter</span>
+              <span class="label-description"
+                >For pour over or drip methods like Aeropress, Chemex, and V60</span
+              >
+            </label>
+            <input type="radio" name="preference" id="Espresso" value="espresso" />
+            <label for="Espresso" class="card">
+              <span class="label-heading">Espresso</span>
+              <span class="label-description"
+                >Dense and finely ground beans for an intense, flavorful experience</span
+              >
+            </label>
+          </div>
+
+          <button class="accordion type" id="type" type="button">What type of coffee?</button>
+          <div class="panel">
+            <input type="radio" name="type" id="SingleOrigin" value="single origin" />
+            <label for="SingleOrigin" class="card">
+              <span class="label-heading">Single origin</span>
+              <span class="label-description"
+                >Distinct, high quality coffee from a specific family-owned farm</span
+              >
+            </label>
+            <input type="radio" name="type" id="Decaf" value="decaf" />
+            <label for="Decaf" class="card">
+              <span class="label-heading">Decaf</span>
+              <span class="label-description"
+                >Just like regular coffee, except the caffeine has been removed</span
+              >
+            </label>
+            <input type="radio" name="type" id="Blended" value="blended" />
+            <label for="Blended" class="card">
+              <span class="label-heading">Blended</span>
+              <span class="label-description"
+                >Combination of two or three dark roasted beans of organic coffees</span
+              >
+            </label>
+          </div>
+
+          <button class="accordion weight" id="weight" type="button">
+            How much would you like?
+          </button>
+          <div class="panel">
+            <input type="radio" name="weight" id="250g" value="250g" />
+            <label for="250g" class="card">
+              <span class="label-heading">250g</span>
+              <span class="label-description"
+                >Perfect for the solo drinker. Yields about 12 delicious cups.</span
+              >
+            </label>
+            <input type="radio" name="weight" id="500g" value="500g" />
+            <label for="500g" class="card">
+              <span class="label-heading">500g</span>
+              <span class="label-description"
+                >Perfect option for a couple. Yields about 40 delectable cups.</span
+              >
+            </label>
+            <input type="radio" name="weight" id="1000g" value="1000g" />
+            <label for="1000g" class="card">
+              <span class="label-heading">1000g</span>
+              <span class="label-description"
+                >Perfect for offices and events. Yields about 90 delightful cups.</span
+              >
+            </label>
+          </div>
+
+          <button class="accordion ground" id="ground" type="button">Want us to grind them?</button>
+          <div class="panel">
+            <input type="radio" name="ground" id="Wholebean" value="wholebean" />
+            <label for="Wholebean" class="card">
+              <span class="label-heading">Wholebean</span>
+              <span class="label-description"
+                >Best choice if you cherish the full sensory experience</span
+              >
+            </label>
+            <input type="radio" name="ground" id="Filter2" value="filter" />
+            <label for="Filter2" class="card">
+              <span class="label-heading">Filter</span>
+              <span class="label-description"
+                >For drip or pour-over coffee methods such as V60 or Aeropress</span
+              >
+            </label>
+            <input type="radio" name="ground" id="Cafetiére" value="cafetiére" />
+            <label for="Cafetiére" class="card">
+              <span class="label-heading">Cafetiére</span>
+              <span class="label-description"
+                >Course ground beans specially suited for french press coffee</span
+              >
+            </label>
+          </div>
+
+          <button class="accordion delivery" id="delivery" type="button">
+            How often should we deliver?
+          </button>
+          <div class="panel">
+            <input type="radio" name="delivery" id="weekly" value="every week" />
+            <label for="weekly" class="card">
+              <span class="label-heading">Every week</span>
+              <span class="label-description"
+                >$<span class="price">14.00</span> per shipment. Includes free first-class
+                shipping.</span
+              >
+            </label>
+            <input type="radio" name="delivery" id="twice" value="every 2 weeks" />
+            <label for="twice" class="card">
+              <span class="label-heading">Every 2 weeks</span>
+              <span class="label-description"
+                >$<span class="price">17.25</span> per shipment. Includes free priority
+                shipping.</span
+              >
+            </label>
+            <input type="radio" name="delivery" id="monthly" value="every month" />
+            <label for="monthly" class="card">
+              <span class="label-heading">Every month</span>
+              <span class="label-description"
+                >$<span class="price">22.50</span> per shipment. Includes free priority
+                shipping.</span
+              >
+            </label>
+          </div>
+
+          <section class="summary-container">
+            <h4>ORDER SUMMARY</h4>
+            <!-- Summary text generated by javascript -->
+          </section>
+          <button type="submit" class="cta" disabled>Create my plan!</button>
+        </form>
+      </article>
+    </main>
+
+    <footer class="footer_plan">
+      <img
+        width="218"
+        height="24"
+        src="./assets/shared/desktop/logo-footer.svg"
+        alt="coffeeroasters logo"
+      />
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="plan.html">Create Your Plan</a></li>
+      </ul>
+      <ul class="social-links">
+        <li>
+          <a href="https://www.facebook.com"
+            ><img
+              width="24"
+              height="24"
+              src="./assets/shared/desktop/icon-facebook.svg"
+              alt="Facebook icon"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com"
+            ><img
+              width="24"
+              height="24"
+              src="./assets/shared/desktop/icon-twitter.svg"
+              alt="Twitter icon"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com"
+            ><img
+              width="24"
+              height="24"
+              src="./assets/shared/desktop/icon-instagram.svg"
+              alt="Instagram icon"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
