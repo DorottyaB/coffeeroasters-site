@@ -165,7 +165,6 @@ function calcTotal() {
 if (formPlan) {
   formPlan.addEventListener('submit', e => {
     e.preventDefault();
-    window.scrollTo(0, 0);
     const summaryText = document.querySelector('.summary-container p').innerHTML;
     const body = document.querySelector('.body_plan');
     const overlay = document.querySelector('.overlay');
@@ -174,7 +173,13 @@ if (formPlan) {
     body.classList.add('overlay-visible');
     overlay.classList.remove('hidden');
     summaryElement.innerHTML = summaryText;
+
+    const prevBtn = document.querySelector('.modal-btn');
+    if (prevBtn) {
+      prevBtn.remove();
+    }
     const modalBtn = document.createElement('button');
+    modalBtn.className = 'modal-btn';
 
     const total = calcTotal();
 
