@@ -17,7 +17,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/DorottyaB/coffeeroasters-site)
-- Live Site URL: [GitHub Pages](https://dorottyab.github.io/coffeeroasters-site/)
+- Live Site URL: [dorottyab.github.io/coffeeroasters-site](https://dorottyab.github.io/coffeeroasters-site/)
 
 ### Built with
 
