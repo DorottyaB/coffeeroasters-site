@@ -41,15 +41,19 @@ h6 {
   font-family: 'Fraunces', serif;
 }
 
-h2 {
+.heading-xl {
+  font-size: 40px;
+}
+
+.heading-lg {
   font-size: 32px;
 }
 
-h3 {
+.heading-md {
   font-size: 28px;
 }
 
-h4 {
+.heading-sm {
   font-size: 24px;
 }
 
@@ -153,10 +157,6 @@ header {
   margin: 40px 24px 0 24px;
 }
 
-header h1 {
-  font-size: 40px;
-}
-
 header p {
   font-family: 'Barlow', sans-serif;
 }
@@ -208,7 +208,7 @@ article {
   margin-bottom: 48px;
 }
 
-.collection-item h4 {
+.collection-item .heading-sm {
   margin-top: 24px;
 }
 
@@ -277,8 +277,7 @@ article {
   background-color: var(--dark-cyan);
 }
 
-.steps-container > h3 {
-  font-size: 24px;
+.steps-container > .heading-sm {
   color: var(--grey);
 }
 
@@ -301,12 +300,12 @@ article {
   display: none;
 }
 
-.step-item h1 {
+.step-item .heading-number {
   color: var(--pale-orange);
   font-size: 72px;
 }
 
-.step-item h3 {
+.step-item .heading-md {
   margin: 24px 0;
 }
 
@@ -316,7 +315,7 @@ article {
   height: auto;
 }
 
-.about h2 {
+.about.commitment-container .heading-lg {
   margin: 48px 0 30px 0;
 }
 
@@ -353,7 +352,7 @@ article {
   text-align: center;
 }
 
-.about.headquarters-container > h3 {
+.about.headquarters-container > .heading-sm {
   font-size: 24px;
   color: var(--grey);
   margin-bottom: 72px;
@@ -365,7 +364,7 @@ article {
   gap: 80px;
 }
 
-.headquarter-item h3 {
+.headquarter-item .heading-md {
   margin: 47px 0 22px 0;
 }
 
@@ -482,7 +481,7 @@ input[type='radio']:checked + label.card {
   text-align: left;
 }
 
-.summary-container h4 {
+.summary-container h2 {
   font-size: 16px;
   font-family: 'Barlow', sans-serif;
   font-weight: 400;
@@ -600,6 +599,10 @@ footer {
 }
 
 @media screen and (min-width: 700px) {
+  .heading-xl {
+    font-size: 48px;
+  }
+
   body {
     padding: 40px 40px 72px 40px;
   }
@@ -650,7 +653,6 @@ footer {
   }
 
   header h1 {
-    font-size: 48px;
     line-height: 48px;
   }
 
@@ -684,6 +686,7 @@ footer {
     grid-template-columns: repeat(2, max-content);
     grid-template-rows: 80px auto;
     justify-content: center;
+    align-items: center;
     column-gap: 36px;
     text-align: left;
   }
@@ -693,13 +696,14 @@ footer {
     grid-area: 1 / 1 / -1 / 2;
   }
 
-  .collection-item h4 {
+  .collection-item .heading-sm {
     align-self: center;
     margin-top: 0;
   }
 
   .collection-item p {
     margin-top: 0;
+    align-self: start;
   }
 
   .cards-container {
@@ -711,7 +715,7 @@ footer {
     height: 573px;
   }
 
-  .dark-bg h3 {
+  .dark-bg .heading-md {
     font-size: 32px;
   }
 
@@ -736,7 +740,7 @@ footer {
     margin-bottom: 0;
   }
 
-  .card.home h4 {
+  .card.home .heading-sm {
     align-self: end;
   }
 
@@ -792,7 +796,7 @@ footer {
     z-index: -1;
   }
 
-  .step-item h3 {
+  .step-item .heading-md {
     margin: 32px 0;
   }
 
@@ -802,25 +806,20 @@ footer {
   }
 
   /* ------------- ABOUT PAGE ------------- */
-  article.about {
-    margin: 144px 0;
+  .header_about .heading-md {
+    font-size: 32px;
   }
 
-  .about picture {
-    grid-area: 1 / 1 / -1 / 2;
+  article.about {
+    margin: 144px 0;
   }
 
   .about img {
     width: auto !important;
   }
 
-  .about h2 {
-    grid-area: 1 / 2 / 2 / -1;
+  .about .heading-lg {
     margin: 0;
-  }
-
-  .about p {
-    grid-area: 2 / 2 / -1 / -1;
   }
 
   .about.commitment-container {
@@ -851,7 +850,7 @@ footer {
     text-align: left;
   }
 
-  .headquarter-item h3 {
+  .headquarter-item .heading-md {
     font-size: 24px;
   }
 
@@ -870,7 +869,7 @@ footer {
     z-index: 1;
   }
 
-  .steps-container.dark-bg h3 {
+  .steps-container.dark-bg .heading-md {
     font-size: 28px;
   }
 
@@ -958,6 +957,18 @@ footer {
     scroll-behavior: smooth;
   }
 
+  .heading-xl {
+    font-size: 72px;
+  }
+
+  .heading-lg {
+    font-size: 40px;
+  }
+
+  .heading-md {
+    font-size: 32px;
+  }
+
   p {
     font-size: 16px;
   }
@@ -991,7 +1002,6 @@ footer {
   }
 
   header h1 {
-    font-size: 72px;
     line-height: 72px;
   }
 
@@ -1046,7 +1056,7 @@ footer {
     gap: 32px;
   }
 
-  .dark-bg h3 {
+  .dark-bg .heading-md {
     font-size: 40px;
   }
 
@@ -1066,7 +1076,7 @@ footer {
     margin-bottom: 32px;
   }
 
-  .card.home h4,
+  .card.home .heading-sm,
   .card.home p {
     align-self: center;
   }
@@ -1080,7 +1090,7 @@ footer {
     margin: 80px 0 64px 0;
   }
 
-  .step-item h3 {
+  .step-item .heading-md {
     width: 200px;
   }
 
@@ -1090,7 +1100,7 @@ footer {
   }
 
   /* ------------- ABOUT PAGE ------------- */
-  .header_about h3 {
+  .header_about .heading-md {
     font-size: 40px;
   }
 
@@ -1109,12 +1119,23 @@ footer {
     row-gap: 32px;
   }
 
+  .about picture {
+    grid-area: 1 / 1 / -1 / 2;
+  }
+
+  .about .heading-lg {
+    grid-area: 1 / 2 / 2 / -1;
+  }
+
+  .about p {
+    grid-area: 2 / 2 / -1 / -1;
+  }
+
   .about.commitment-container picture {
     justify-self: center;
   }
 
-  .about.commitment-container h2 {
-    font-size: 40px;
+  .about.commitment-container .heading-lg {
     align-self: end;
   }
 
@@ -1149,13 +1170,17 @@ footer {
     max-width: 50%;
   }
 
-  .headquarter-item h3 {
+  .headquarter-item .heading-md {
     font-size: 32px;
   }
 
   /* ------------- PLAN PAGE ------------- */
   .steps-container.dark-bg {
     background-image: url('./assets/plan/desktop/bg-steps.png');
+  }
+
+  .steps-container.dark-bg .heading-md {
+    font-size: 32px;
   }
 
   .form-container {
@@ -1235,6 +1260,10 @@ footer {
 
   form.form_plan button.cta {
     align-self: flex-end;
+  }
+
+  .modal--heading {
+    font-size: 40px;
   }
 
   /* ------------- FOOTER ------------- */
